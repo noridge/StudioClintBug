@@ -1,0 +1,30 @@
+apply plugin: 'com.android.model.native'
+
+model {
+    android {
+        compileSdkVersion = 23
+        buildToolsVersion = '23.0.2'
+
+        defaultConfig {
+            minSdkVersion.apiLevel = 21
+            targetSdkVersion.apiLevel = 23
+            versionCode = 1
+            versionName = '1.0'
+        }
+        ndk {
+            moduleName = 'addition'
+        }
+        sources {
+            main {
+                jni {
+                    exportedHeaders{
+                        srcDir "src"
+                    }
+                    source {
+                        srcDir "src"
+                    }
+                }
+            }
+        }
+    }
+}

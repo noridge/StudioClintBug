@@ -1,1 +1,4 @@
 include ':app'
+include ':Addition'
+project (":Addition").projectDir = new File("../../Framework/Addition")
+
